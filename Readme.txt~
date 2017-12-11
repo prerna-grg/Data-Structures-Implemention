@@ -1,0 +1,49 @@
+to run the code for tree
+
+$g++ -o m main_tree.cpp
+$./m
+
+to run the code for maps
+
+$g++ -o m main_map.cpp
+$./m
+
+Hashing implementation using 4 different hash codes and 3 hash functions.
+
+In case of number map we had a total of 1099 entries , and with separate chaining there were approximately 50% collisions , minimum collisions were observed in integer casting hash code and MAD function , while maximum collisions were observed in Component Sum hashcode with division as the hash function.
+Load factor = 1099/743 = 1.47
+
+
+Similarly in name map we had a total of 4351 entries , and with separate chaining there were approximately 50% collisions , minimum collisions were observed in polynomial sum hash code and division function , while maximum collisions were observed in Component Sum hashcode with division as the hash function.
+Load factor = 4315/2351 = 1.83
+
+
+these are the bucket sizes for all the maps
+
+NUMBER MAP:
+
+                  divison       mad        multiplication
+Component Sum       7            6               6
+
+Polynomial Sum      7            7               8
+
+Cyclic Sum          7            7               6
+
+Integer casting	    8            6               7
+
+
+
+
+NAME MAP:
+
+                  divison       mad        multiplication
+Component Sum        38          32            70
+
+Polynomial Sum        7           6             9
+
+Cyclic Sum            7           8             8
+
+Integer casting	      11          11            12
+
+
+The combination with minimum bucket sizes is the most uniformly distributed map 
